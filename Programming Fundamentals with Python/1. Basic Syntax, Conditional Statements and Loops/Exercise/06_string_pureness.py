@@ -2,11 +2,7 @@ number = int(input())
 
 for i in range(number):
     string = input()
-    for char in enumerate(string):
-        if char == "," or char == "." or char == "_":
-            print(f"{string} is not pure!")
-            break
+    if "," in string or "." in string or "_" in string:
+        print(f"{string} is not pure!")
     else:
         print(f"{string} is pure.")
-
-
