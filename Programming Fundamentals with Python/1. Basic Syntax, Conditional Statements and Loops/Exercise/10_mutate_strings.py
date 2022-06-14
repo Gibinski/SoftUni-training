@@ -17,3 +17,4 @@ for i in range(len(firs_str)):
         continue
     previous_str = result
     print(result)
+    
