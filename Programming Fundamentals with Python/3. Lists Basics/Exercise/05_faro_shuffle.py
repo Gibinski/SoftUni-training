@@ -1,17 +1,12 @@
 deck = input().split()
 n = int(input())
-count = True
 for _ in range(n):
-    for i, card in enumerate(deck):
-        deck_left.a[i:n]
-        deck_right = []
-    for card in deck:
-        if count:
-            deck_1.append(card)
-            count = False
-        else:
-            deck_2.append(card)
-            count = True
-new_deck = deck_1 + deck_2
+    final_deck = []
+    deck_left = deck[:len(deck) // 2]
+    deck_right = deck[len(deck) // 2:len(deck)]
+    for card in range(len(deck_left)):
+        final_deck.append(deck_left[card])
+        final_deck.append(deck_right[card])           
+    deck = final_deck
 
-print(new_deck)        
+print(deck)        
