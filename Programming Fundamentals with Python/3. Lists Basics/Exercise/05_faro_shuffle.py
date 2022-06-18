@@ -8,5 +8,4 @@ for _ in range(n):
         final_deck.append(deck_left[card])
         final_deck.append(deck_right[card])           
     deck = final_deck
-
-print(deck)        
+print(deck)
