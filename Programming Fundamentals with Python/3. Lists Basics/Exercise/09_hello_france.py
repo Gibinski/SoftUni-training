@@ -3,14 +3,11 @@ collection_of_items = input().split("|")
 budget = float(input())
 basket = budget
 profit = .0
-items = []
 price_list = []
 for item in collection_of_items:
-    items.append(item.split("->")) 
-
-for item in items:
-    type = item[0]
-    price = float(item[1])
+    items = item.split("->")
+    type = items[0]
+    price = float(items[1])
     filter_items = (
         basket >= price and (
             (type == "Clothes" and price <= 50) or

@@ -1,13 +1,10 @@
 energy = 100
 coins = 100
-days = []
 working_day_events = input().split("|")
 for day in working_day_events:
-    days.append(day.split("-")) 
-
-for day in days:
-    event = day[0]
-    value = int(day[1])
+    days = day.split("-")
+    event = days[0]
+    value = int(days[1])
     if event == "rest":
         if energy + value > 100:
             value = 100 - energy
