@@ -6,6 +6,7 @@ def add_and_subtract(numbers):
 def sum_numbers(a, b):
     return a + b
 
+
 def subtract(a, b):
     return a - b
     
@@ -15,5 +16,6 @@ def read_numbers(n):
     for i in range(n):
         numbers.append(int(input()))
     return numbers
+
 
 print(add_and_subtract(read_numbers(3)))
