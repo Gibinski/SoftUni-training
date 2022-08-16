@@ -1,6 +1,6 @@
 import re
 
-pattern = r"\b[A-Z][a-z]+ \b[A-Z][a-z]+\b"
+pattern = r"\b[A-Z][a-z]+\b[A-Z][a-z]+\b"
 name = input()
 valid_name = re.findall(pattern, name)
 
