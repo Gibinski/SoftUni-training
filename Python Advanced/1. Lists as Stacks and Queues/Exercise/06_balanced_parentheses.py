@@ -1,7 +1,12 @@
 from collections import deque
 
 que = deque(input())
-types = {")": "(", "]": "[", "}": "{"}
+types = {
+    ")": "(",
+    "]": "[",
+    "}": "{"
+}
+
 stack = []
 if len(que) % 2 == 0:
     while que:

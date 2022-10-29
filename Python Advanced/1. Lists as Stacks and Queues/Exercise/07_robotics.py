@@ -1,42 +1,38 @@
 from collections import deque
 from datetime import datetime, timedelta
 
-data = input().split(";")
-time = datetime.strptime(input(), "%H:%M:%S")
+robots = input().split(";")
+for i in range(len(robots)):
+    robot = robots[i].split("-")
+    robots[i] = {
+        "name": robot[0],
+        "processing_time": int(robot[1]),
+        "available_at": 0
+    }
 
-products = deque([])
-product = input()
-while product != "End":
-    products.append(product)
-    product = input()
+start_time = datetime.strptime(input(), "%H:%M:%S")
 
-robots = deque([])
-busy_robots = []
-for element in data:
-    robot = {}
-    name, processing_time = element.split("-")
-    robot["name"] = name
-    robot["processing_time"] = int(processing_time)
-    robot["free"] = True
-    robot["available_at"] = time
-    robots.append(robot)
+item = deque([])
+next_item = input()
+while next_item != "End":
+    item.append(next_item)
+    next_item = input()
 
-while products:           
-    time = time + timedelta(seconds=1)
-    curent_product = products.popleft()
+current_time = 0
 
-    for robot in busy_robots:
-        if robot["available_at"] == time:
-            robots.append(robot)
-            busy_robots.remove(robot)
+while item:           
+    current_time += 1 
+    current_item = item.popleft()
 
-    if robots:
-            curent_robot = robots.popleft()
-            curent_robot["available_at"] = time + timedelta(seconds=curent_robot["processing_time"])
-            print(f'{curent_robot["name"]} - {curent_product} [{time.hour:02}:{time.minute:02}:{time.second:02}]')
-            busy_robots.append(curent_robot)
+    for robot in robots:
+        if robot["available_at"] <= current_time:
+            robot["available_at"] = current_time + robot["processing_time"]
+            time = (start_time + timedelta(seconds=current_time)).strftime("%H:%M:%S")
+            print(f"{robot['name']} - {current_item} [{time}]")
+
+            break
     else:
-        products.append(curent_product)
+        item.append(current_item)
 
 
 
