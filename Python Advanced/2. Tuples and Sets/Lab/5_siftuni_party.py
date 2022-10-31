@@ -4,7 +4,7 @@ from tkinter import Widget
 n = int(input())
 
 code = input()
-while "End":
+while code != "End":
     
     code = input()
 
