@@ -11,7 +11,6 @@ for i in range(n):
     else:
         set_odd.add(sum_char)
 
-
 sum_even = sum(set_even)
 sum_odd = sum(set_odd)
 
@@ -21,6 +20,5 @@ elif sum_odd > sum_even:
     result = set_odd - set_even
 else:
     result = set_even | set_odd
-
 
 print(", ".join(map(str, result)))
