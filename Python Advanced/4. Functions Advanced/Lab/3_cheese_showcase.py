@@ -2,7 +2,7 @@ def sorting_cheeses(**kwargs):
     kwargs = sorted(kwargs.items())
     for key, value in kwargs.items():
         print(key)
-        pieces = sorted(value)
+        pieces = sorted(value, reverse=True)
         for el in pieces:
             print(el)
 
