@@ -1,10 +1,12 @@
 def sorting_cheeses(**kwargs):
-    kwargs = sorted(kwargs.items())
-    for key, value in kwargs.items():
-        print(key)
-        pieces = sorted(value, reverse=True)
-        for el in pieces:
-            print(el)
+    sorted_cheeses = sorted(kwargs.items(), key = lambda kvpt: (-len(kvpt[1]), kvpt[0]))
+    result = ""
+    for name, value in sorted_cheeses:
+        result += name +"\n"
+        sorted_value = sorted(value, reverse=True   )
+        result += "\n".join(map(str, sorted_value))
+        result += "\n"
+    return result
 
 
 print(
