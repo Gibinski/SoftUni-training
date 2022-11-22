@@ -6,8 +6,5 @@ def rectangle(number, power):
     power -= 1
 
 
-
-
-
 print(rectangle(2, 10))
 print(rectangle('2', 10))
