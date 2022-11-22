@@ -9,7 +9,7 @@ def age_assignment(*args, **kwargs):
         name = get_name(args, key)
         people[name] = val
     result = ""
-    sorted_people = dict(sorted(people.items(), key=lambda x: x[0])) 
+    sorted_people = dict(sorted(people.items())) 
 
     for name, age in sorted_people.items():
         result += f"{name} is {age} years old." + "\n"
