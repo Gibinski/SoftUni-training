@@ -1,8 +1,4 @@
-def line_to_int_list():
-    line = []
-    for el in input().split(", "):
-        line.append(int(el)) 
-    return line
+from read_line import line_to_int_list
 
 n, m = line_to_int_list()
 matrix = []
