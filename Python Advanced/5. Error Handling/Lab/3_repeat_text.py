@@ -1,9 +1,7 @@
-text = input()
-
-while True:
-    try:
-        num = int(input("Please enter a number: "))
-        print(text * num)
-        break
-    except ValueError:
-        print("Variable times must be an integer")
+try:
+    text = input()
+    times = int(input())
+    output = text * times
+    print(output)
+except ValueError:
+    print("Variable times must be an integer")
