@@ -23,6 +23,6 @@ sorted_dict = dict(sorted(words_dict.items(), key=lambda x: x[1], reverse=True))
 
 file_path_other = path.join("other.txt")
 with open(file_path_other, "w") as file:
-    for key, val in sorted_dict.items():
-        line = f"{key} - {val}" + "\n"
+    for word, count in sorted_dict.items():
+        line = f"{word} - {count}" + "\n"
         file.write(line)
