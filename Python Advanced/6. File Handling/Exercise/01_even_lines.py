@@ -1,10 +1,6 @@
-from re import findall
 from os import path
 
-pattern = r""
-text = ""
 symbols = ["-", ",", ".", "!", "?"]
-
 
 file_path = path.join("01_text.txt")
 with open(file_path, "r") as file:
