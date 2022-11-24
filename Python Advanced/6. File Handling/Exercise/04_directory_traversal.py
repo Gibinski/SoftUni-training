@@ -2,6 +2,7 @@ import os
 
 directory = input()
 extensions = {}
+result = []
 
 for file_name in os.listdir(directory):
     file = os.path.join(directory, file_name)
@@ -16,7 +17,10 @@ for file_name in os.listdir(directory):
 extensions = sorted(extensions.items(), key=lambda x: x[0])
 
 for ex, files in extensions:
-    print(f'.{ex}')
-    
+    result.append(f'.{ex}')
+
     for file in files:
-        print(f"- - - {file}")
+        result.append(f"- - - {file}")
+
+with open("report.txt", "w") as file:
+    file.write("".join(result))
