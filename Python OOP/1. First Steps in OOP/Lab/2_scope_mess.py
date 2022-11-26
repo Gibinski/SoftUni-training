@@ -10,7 +10,7 @@ def outer():
         print("inner:", x) 
 
 
-    def change_global(): 
+    def change_global():     
         global x
         x = "global: changed!" 
 
