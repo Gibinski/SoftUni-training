@@ -2,9 +2,9 @@ from pokemon import Pokemon
 
 
 class Trainer:
-    def __init__(self, name: str, pokemons = []):
+    def __init__(self, name: str):
         self.name = name
-        self.pokemons = pokemons
+        self.pokemons = []
 
 
     def add_pokemon(self, pokemon: Pokemon):
@@ -16,23 +16,25 @@ class Trainer:
 
 
     def release_pokemon(self, pokemon_name: str):
-        for pokemon in self.pokemons:
-            if pokemon_name == pokemon.name:
-                self.pokemons.remove(pokemon)
-                return f"You have released {pokemon_name}"
-        else:
+        try:
+            pokemon = next(filter(lambda p: p.name == pokemon_name, self.pokemons))
+        except StopIteration:
             return "Pokemon is not caught"
+
+        self.pokemons.remove(pokemon)
+        return f"You have released {pokemon_name}"
 
 
     def trainer_data(self):
-        result = f"Pokemon Trainer {self.name}\n" + f"Pokemon count {len(self.pokemons)}\n"
+        result = []
+        result.append(f"Pokemon Trainer {self.name}")
+        result.append(f"Pokemon count {len(self.pokemons)}") 
         for pokemon in self.pokemons:
-            result += "- " + pokemon.pokemon_details()
-        return result
+            result.append(f"- {pokemon.pokemon_details()}")  
+        return "\n".join(result)
 
 
 # Test Code
-
 pokemon = Pokemon("Pikachu", 90)
 print(pokemon.pokemon_details())
 trainer = Trainer("Ash")
