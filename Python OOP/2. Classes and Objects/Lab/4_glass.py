@@ -7,11 +7,13 @@ class Glass:
 
 
     def fill(self, ml):
-        if self.content + ml <= Glass.capacity :
-            self.content += ml
-            return f"Glass filled with {ml} ml"
-        else:
+        if self.content + ml > Glass.capacity :
             return f"Cannot add {ml} ml" 
+
+        self.content += ml
+        
+        return f"Glass filled with {ml} ml"
+        
 
 
     def empty(self):
