@@ -7,13 +7,16 @@ class Account:
 
     def credit(self, amount):
         self.balance += amount
+
         return self.balance
 
 
     def debit(self, amount):
         if self.balance >= amount:
             self.balance -= amount
+
             return self.balance
+            
         return "Amount exceeded balance"
 
     def info(self):
