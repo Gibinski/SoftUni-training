@@ -1,4 +1,5 @@
 .venv/
 project/
+__pycache__/
 test.*
 main.*
