@@ -1,17 +1,13 @@
-from project.vehicle import Vehicle
-from project.family_car import FamilyCar
+from project.food import Food
+from project.drink import Drink
+from project.product_repository import ProductRepository
 
-vehicle = Vehicle(50, 150)
-print(Vehicle.DEFAULT_FUEL_CONSUMPTION)
-print(FamilyCar.DEFAULT_FUEL_CONSUMPTION)
-print(vehicle.fuel)
-print(vehicle.horse_power)
-print(vehicle.fuel_consumption)
-vehicle.drive(100)
-print(vehicle.fuel)
-family_car = FamilyCar(150, 150)
-family_car.drive(50)
-print(family_car.fuel)
-family_car.drive(50)
-print(family_car.fuel)
-print(family_car.__class__.__bases__[0].__name__)
+food = Food("apple")
+drink = Drink("water")
+repo = ProductRepository()
+repo.add(food)
+repo.add(drink)
+print(repo.products)
+print(repo.find("water"))
+repo.find("apple").decrease(5)
+print(repo)
