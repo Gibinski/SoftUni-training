@@ -3,7 +3,7 @@ from project.worker import Worker
 
 
 class Zoo:
-    def __init__(self, name: str, budget: int, animal_capacity: int, workers_capacity: int):
+    def __init__(self, name, budget, animal_capacity, workers_capacity):
         self.name = name
         self.__budget = budget
         self.__animal_capacity = animal_capacity
@@ -23,7 +23,7 @@ class Zoo:
 
         self.__budget -= price
 
-        return f"{self.name} the {animal.__class__.__name__} added to the zoo"
+        return f"{animal.name} the {animal.__class__.__name__} added to the zoo"
 
 
     def hire_worker(self, worker: Worker):
@@ -32,7 +32,7 @@ class Zoo:
 
         self.workers.append(worker)   
 
-        return f"{self.name} the {type(worker)} hired successfully"
+        return f"{worker.name} the {worker.__class__.__name__} hired successfully"
 
 
     def fire_worker(self, worker_name):
