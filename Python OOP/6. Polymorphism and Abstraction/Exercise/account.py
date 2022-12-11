@@ -39,20 +39,11 @@ class Account:
     def __gt__(self, other):
         return self.balance > other.balance
 
-    def __lt__(self, other):
-        return self.balance < other.balance
-
     def __ge__(self, other):
         return self.balance >= other.balance
 
-    def __le__(self, other):
-        return self.balance <= other.balance
-
     def __eq__(self, other):
-        return self.balance == other.balance
-
-    def __ne__(self, other):
-        return self.balance != other.balance
+        return self.balance == other.balance 
 
     def __add__(self, other):
         new_owner = f"{self.owner}&{other.owner}"
