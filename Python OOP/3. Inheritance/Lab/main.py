@@ -1,0 +1,16 @@
+from project.stack import Stack
+
+print()
+s = Stack()
+print(s.push(1))
+print(type(s.top()))
+print(s.is_empty())
+print(s.pop())
+print(s.is_empty())
+print(s)
+print()
+print(s.push("element"))
+print(s.push("1"))
+print(s.top())
+print(s.push("2"))
+print(s)
