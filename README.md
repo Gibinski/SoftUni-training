@@ -1,3 +1,9 @@
 # SoftUni-training
 
-## Programming Fundamentals with Python ## 
+## Programming Fundamentals with Python 
+
+## Python Advanced
+
+## Python OOP
+
+## HTML/CSS
