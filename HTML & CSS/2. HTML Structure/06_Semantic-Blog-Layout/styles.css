@@ -1,3 +1,44 @@
+header {
+    border-radius: 3px;
+    padding: 8px 10px;
+    background-color: #dceaf4;
+    border: 1px solid #bfcacb;
+}
+header * {
+    display: inline;
+    vertical-align: middle;
+}
+nav {
+    margin: 0;
+    padding: 10px;
+}
+nav li {
+    margin: 10;
+}
+nav li a {
+    text-decoration: none;
+}
 body {
-    background-color: #fff;
+    background-color: #b7d7e8;
+}
+section {
+    margin: 15px 10px;
+}
+article {
+    display: table-cell;
+    width: 50%;
+    padding: 10px;
+    background-color: #e5f0f7;
+    break-inside: 10px sol
+     #b7d7e8;
+}
+footer {
+    margin: 5px;
+    padding: 5px 10px;
+    border-radius: 3px;
+    background-color: #dceaf4;
+    border: 1px solid #bfcacb;
+}
+footer p {
+    margin: 5px;
 }
