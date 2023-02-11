@@ -1,0 +1,26 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+body {
+    padding: 60px;
+}
+header * {
+    display: inline-block;
+}
+header h1 {
+    position: left;
+    padding-right: 100px;
+}
+
+main {
+    border-top: 3px solid black;
+}
+main h1 {
+    font-family: 'Times New Roman', Times, sans-serif;
+    font-style: normal;
+}
+a {
+    text-decoration: none;
+    padding-left: 26px;
+    color: green;
+}
