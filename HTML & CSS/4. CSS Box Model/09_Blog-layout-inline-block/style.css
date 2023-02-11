@@ -1,0 +1,26 @@
+html {
+    font-family: Helvetica, sans-serif;
+}
+body {
+    background-color: rgb(238, 238, 238);
+    color: rgb(51, 51, 51);
+}
+body * {
+    display: inline-block;
+}
+body article {
+    width: 800px;
+    position: left;
+}
+asude {
+    width: 180px;
+}
+.img {
+    width: 600px;
+    height: 450px;
+}
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
