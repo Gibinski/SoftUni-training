@@ -5,15 +5,15 @@ body {
     background-color: rgb(238, 238, 238);
     color: rgb(51, 51, 51);
 }
-body * {
-    display: inline-block;
-}
 body article {
+    display: inline-block;
     width: 76%;
     position: left;
 }
 aside {
+    display: inline-block;
     width: 22%;
+    vertical-align: top;
 }
 .img {
     width: 600px;
