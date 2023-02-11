@@ -9,11 +9,11 @@ body * {
     display: inline-block;
 }
 body article {
-    width: 800px;
+    width: 76%;
     position: left;
 }
-asude {
-    width: 180px;
+aside {
+    width: 22%;
 }
 .img {
     width: 600px;
