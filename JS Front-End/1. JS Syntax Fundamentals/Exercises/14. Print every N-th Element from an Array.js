@@ -1,9 +1,7 @@
 function printEveryNThElementFromAnArray(arr, step) {
     let arrToPrint = [];
-    for (let index = 0; index < arr.length; index++) {
-        if (index % step == 0) {
-            arrToPrint.push(arr[index]);
-        }
+    for (let index = 0; index < arr.length; index += step) {
+        arrToPrint.push(arr[index]);
     }
     return arrToPrint;
 }
