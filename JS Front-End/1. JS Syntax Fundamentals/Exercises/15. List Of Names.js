@@ -1,11 +1,9 @@
 function listOfNames(arr) {
-    arr.sort((a, b) => {
-        return a.localeCompare(b);
-    });
-    for (let index = 0; index < arr.length; index++) {
-        console.log(`${index + 1}.${arr[index]} `);
-    }
+    return arr
+    .sort((a, b) => a.localeCompare(b))
+    .map((name, index) => `${index + 1}.${name} `)
+    .join("\n");
 }
 
-listOfNames(["John", "Bob", "Christina", "Ema"]);
+console.log(listOfNames(["John", "Bob", "Christina", "Ema"]));
  
