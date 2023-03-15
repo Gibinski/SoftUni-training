@@ -1,7 +1,6 @@
-function mathPower() {
-
+function mathPower(number, power) {
+    return number ** power;
 }
 
-mathPower();
-mathPower();
-mathPower();
+console.log(mathPower(2, 8));
+console.log(mathPower(3, 4));
