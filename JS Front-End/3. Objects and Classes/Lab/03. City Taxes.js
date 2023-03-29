@@ -5,13 +5,13 @@ function cityTaxes(name, population, treasury) {
         treasury, 
         taxRate: 10,
         collectTaxes() {
-            this.treasury += Math.ceil(this.population * this.taxRate) 
+            this.treasury += Math.trunc(this.population * this.taxRate) 
         },
         applyGrowth(percentage) {
-            this.population += Math.ceil(this.population * percentage / 100)
+            this.population += Math.trunc(this.population * percentage / 100)
         },
         applyRecession(percentage) {
-            this.treasury -= Math.ceil(this.treasury * percentage / 100)
+            this.treasury -= Math.trunc(this.treasury * percentage / 100)
         }
     }
     return city
