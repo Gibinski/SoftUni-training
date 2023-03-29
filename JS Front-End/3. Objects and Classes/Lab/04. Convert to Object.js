@@ -1,9 +1,9 @@
 function convertToObject(jsonStr) {
     let person = JSON.parse(jsonStr);
-    for (const key in person) {
-        console.log(`${key}: ${person[key]}`);
+    for (const [key, value] of Object.entries(person)) {
+        console.log(`${key}: ${value}`);
     }
 }
 
-console.log(convertToObject('{"name": "George", "age": 40, "town": "Sofia"}'));
-console.log(convertToObject('{"name": "Peter", "age": 35, "town": "Plovdiv"}'));
+convertToObject('{"name": "George", "age": 40, "town": "Sofia"}');
+convertToObject('{"name": "Peter", "age": 35, "town": "Plovdiv"}');
