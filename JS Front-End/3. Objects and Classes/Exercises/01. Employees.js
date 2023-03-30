@@ -1,5 +1,8 @@
 function employees(input) {
-
+    for (const name of input) {
+        let [employeeName, personalNum] = [name, name.length]
+        console.log(`Name: ${employeeName} -- Personal Number: ${personalNum}`);
+    }
 }
 
 employees([
@@ -8,7 +11,7 @@ employees([
     'Juan Peterson',
     'Brendan Villarreal'
 ]);
-console.log();
+console.log("");
 employees([
     'Samuel Jackson',
     'Will Smith',
