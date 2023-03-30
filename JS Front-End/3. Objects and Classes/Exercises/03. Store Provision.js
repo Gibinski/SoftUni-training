@@ -1,16 +1,18 @@
 function storeProvision(firstArr, secondArr) {
     let store = {};
     for (let i = 0; i < firstArr.length; i+=2) {
-        store[firstArr[i]] = firstArr[i+1];
+        store[firstArr[i]] = Number(firstArr[i+1]);
     }
     for (let i = 0; i < secondArr.length; i+=2) {
         if (store[secondArr[i]] == undefined) {
-            store[secondArr[i]] = secondArr[i+1];
+            store[secondArr[i]] = Number(secondArr[i+1]);
         } else {
-            store[secondArr[i]] += secondArr[i+1];
+            store[secondArr[i]] += Number(secondArr[i+1]);
         }
     }
-    
+    for (const [product, quantity] of Object.entries(store)) {
+        console.log(`${product} -> ${quantity}`)
+    }
 }
 
 storeProvision(
