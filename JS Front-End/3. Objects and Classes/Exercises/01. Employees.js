@@ -1,8 +1,10 @@
 function employees(input) {
-    for (const name of input) {
-        let [employeeName, personalNum] = [name, name.length]
-        console.log(`Name: ${employeeName} -- Personal Number: ${personalNum}`);
-    }
+    Object.entries(input.reduce(
+        (data, employee) => {
+            data[employee] = employee.length;
+            return data
+    }, {})).forEach(([name, number]) => console.log(
+        `Name: ${name} -- Personal Number: ${number}`))
 }
 
 employees([
