@@ -39,6 +39,8 @@
 * Creation of adaptive (responsive) web design
 * Creating modern websites
 
+# Current
+
 ## JavaScript Front-End
 * Knowledge of basic JavaScript syntax
 * Working with classes and objects
