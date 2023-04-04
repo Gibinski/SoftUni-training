@@ -2,6 +2,11 @@ function inventory(input) {
 
 }
 
+let sortedHetoes = herpes
+    .sorted((heroeA, heroeB) => {
+        return heroeA.level - heroeB.level
+    });
+
 inventory([
     'Isacc / 25 / Apple, GravityGun',
     'Derek / 12 / BarrelVest, DestructionSword',
