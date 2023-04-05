@@ -1,4 +1,5 @@
 # SoftUni-training
+Contains all homework and exam problems from the curriculum of Software University.
 
 ## [Programming Basics](https://softuni.bg/trainings/3632/programming-basics-with-python-march-2022)
 
