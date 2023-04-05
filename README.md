@@ -1,6 +1,8 @@
 # SoftUni-training
 
 ## Programming Basics
+
+<img src="https://softuni.bg/certificates/certificates/converttoimage/131471?code=bd9610d2" alt="Programming Basics" />
 * Working with the console (data input and output)
 * Working with loops (for)
 * Work with more complex logical checks
