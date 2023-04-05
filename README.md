@@ -2,7 +2,8 @@
 
 ## Programming Basics
 
-<img src="https://softuni.bg/certificates/certificates/converttoimage/131471?code=bd9610d2" alt="Programming Basics" />
+<img src="https://softuni.bg/certificates/certificates/converttoimage/131471?code=bd9610d2" alt="Programming Basics" width="120"/>
+
 * Working with the console (data input and output)
 * Working with loops (for)
 * Work with more complex logical checks
@@ -11,6 +12,9 @@
 * Working with more complex loops (nested for loops and while)
 
 ## Programming Fundamentals with Python 
+
+<img src="https://softuni.bg/certificates/certificates/converttoimage/141376?code=e37e4837" alt="Programming Fundamentals with Python" width="120">
+
 * Handling the standard functionality of the programming language
 * Problem analysis and reduction to computer-executable steps
 * Working with linear data structures
