@@ -3,7 +3,7 @@ function inventory(input) {
     for (const line of input) {
         [name, level, itemsStr] = line.split(" / ");
         items = itemsStr.split(", ");
-        heroes.push({name, level, items})
+        heroes.push({name, level: Number(level), items})
     }
     // sorting heroes by level and name
     let sortedHeroes = heroes.sort((heroA, heroB) => {
