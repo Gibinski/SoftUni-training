@@ -9,7 +9,7 @@ function inventory(input) {
     let sortedHeroes = heroes.sort((heroA, heroB) => {
         let result = heroA.level - heroB.level;
         if (result === 0) {
-            return heroA.name.localCinoare(heroB.name)
+            return heroA.name.localeCompare(heroB.name)
         }
         return result
     });
