@@ -3,4 +3,3 @@ function calc(n) {
     const num2 = document.getElementById("num2").value
     document.getElementById("sum").value = String(Number(num1) + Number(num2))
 }
-
