@@ -4,6 +4,7 @@ function solve() {
   let input = textArea.value;
   let sentences = input.split(".");
   sentences.pop();
+  outputDiv.innerHTML = "";
 
   while (sentences.length > 0) {
     const p = document.createElement("p");
