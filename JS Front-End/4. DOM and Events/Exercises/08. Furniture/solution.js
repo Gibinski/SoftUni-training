@@ -27,48 +27,61 @@ function solve() {
     }
   }
   
-  function buying(e) {
-    const btn = this;
-    console.log("I buy!");
+  function buying() {
+    const AllCheckedInput = Array.from(document.querySelectorAll("tbody tr input:checked"));
+    let boughForniture = [];
+    let totalPrice = 0;
+    let sumOfDecorationFactor = 0;
+    
+    for (const input of AllCheckedInput) {
+      const tableRow = input.parentElement.parentElement;
+      const [name, price, factor] = Array.from(tableRow.querySelectorAll("td > p"));
+      boughForniture.push(name.textContent);
+      totalPrice += Number(price.textContent);
+      sumOfDecorationFactor += Number(factor.textContent);
+    }
+
+    let averaeDecorationFactor = sumOfDecorationFactor / AllCheckedInput.length;
+    textareaBuy.value += `Bought furniture: ${boughForniture.join(", ")}` + "\n";
+    textareaBuy.value += `Total price: ${totalPrice.toFixed(2)}` + "\n";
+    textareaBuy.value += `Average decoration factor: ${averaeDecorationFactor}`
   }
 
-}
-
-// type = str
-// content = str
-// id = str
-// classes = arry of str
-// attributes = obj
-function createElement(type, content, parentNode, id, classes, attributes) {
-  const htmlElement = document.createElement(type);
+  // type = str
+  // content = str
+  // id = str
+  // classes = arry of str
+  // attributes = obj
+  function createElement(type, content, parentNode, id, classes, attributes) {
+    const htmlElement = document.createElement(type);
+    
+    if (content && type !== 'input') {
+      htmlElement.textContent = content;
+    }
+    
+    if (content && type === 'input') {
+      htmlElement.value = content; 
+    }
+    
+    if (id) {
+      htmlElement.id = id;
+    }
+    
+    // ["list", "item"]
+    if (classes) {
+      htmlElement.classList.add(...classes);
+    }
+    
+    if (parentNode) {
+      parentNode.appendChild(htmlElement);
+    }
   
-  if (content && type !== 'input') {
-    htmlElement.textContent = content;
-  }
+    // src: "link to img", href: "link to site"
+    if (attributes) {
+      for (const key in attributes)
+      htmlElement.setAttribute(key, attributes[key])
+    }
   
-  if (content && type === 'input') {
-    htmlElement.value = content; 
+    return htmlElement
   }
-  
-  if (id) {
-    htmlElement.id = id;
-  }
-  
-  // ["list", "item"]
-  if (classes) {
-    htmlElement.classList.add(...classes);
-  }
-  
-  console.log(parentNode)
-  if (parentNode) {
-    parentNode.appendChild(htmlElement);
-  }
-
-  // src: "link to img", href: "link to site"
-  if (attributes) {
-    for (const key in attributes)
-    htmlElement.setAttribute(key, attributes[key])
-  }
-
-  return htmlElement
 }
