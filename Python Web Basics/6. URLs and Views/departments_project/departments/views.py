@@ -24,4 +24,4 @@ def details_template(request, department_id):
     }
 
     payload = f"Department: {department_map.get(str(department_id), 'Unknown')}"
-    return render(request, '')
+    return render(request, 'departments/details.html')
