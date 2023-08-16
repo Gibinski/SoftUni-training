@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'django101.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': BASE_DIR / 'tasks',
+        'NAME': 'tasks',
         'USER': 'postgesql-user',
         'PASSLORD': 'Taralej87',
         'HOST': '127.0.0.1',
