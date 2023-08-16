@@ -1,1 +1,51 @@
-JS Front-End/1. JS Syntax Fundamentals/Exercises/.~lock.Условие.docx#
+# Virtual environment
+venv/
+
+# Compiled Python files
+__pycache__/
+*.pyc
+*.pyo
+
+# Logs
+*.log
+
+# Database
+db.sqlite3
+
+# Media and static files (served locally)
+media/
+static/
+
+# Temporary files
+*.swp
+*.swo
+*.~
+*.DS_Store
+
+# Environment variables and sensitive information
+.env
+
+# IDE-specific files (Visual Studio Code)
+.vscode/
+*.code-workspace
+
+# Local configuration files
+*.ini
+*.cfg
+*.conf
+*.env
+*.env.local
+
+# Dependency management (pipenv, poetry, etc.)
+Pipfile.lock
+poetry.lock
+
+# Compiled files
+*.mo
+*.pyc
+
+# Compiled translation files
+locale/
+
+# Ignore migrations if using South or other migration tools
+**/migrations/
