@@ -1,10 +1,5 @@
 version: '3.4'
 
-# NOTE: When connecting to the postgres docker container in the web interface,
-# try using 'postgres' as the host name instead of 'localhost' or 'host.docker.internal'
-
-# NOTE 2: Copy this file in the same directory as 'docker-compose.yml' file and use your own credentials
-
 services:
   postgres:
     image: postgres
@@ -30,3 +25,4 @@ services:
       - "5433:80"
     depends_on:
       - postgres
+docker-compose up -d
