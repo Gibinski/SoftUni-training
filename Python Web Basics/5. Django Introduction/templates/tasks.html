@@ -7,5 +7,15 @@
 </head>
 <body>
     <h1>{{ title }}</h1>
+    <h2>Static subtitle</h2>
+    <div>
+        {% if tasks %}
+            {% for task in tasks %}
+                <div>{{ task.id }} {{ task.titke }} -- {{ task.priority }}</div>
+            {% endfor %}
+            {% else %}
+                <div>No tasks</div>
+            {% endif %}
+    </div>
 </body>
 </html>
