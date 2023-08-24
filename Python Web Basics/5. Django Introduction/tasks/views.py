@@ -15,4 +15,7 @@ def list_tasks(request):
 
 
 def list_tasks_template(request):
-    return render(request, 'tasks.html')
+    content = {
+        'title': "My tasks for today",
+    }
+    return render(request, 'tasks.html', context=content)
