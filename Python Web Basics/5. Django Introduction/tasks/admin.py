@@ -2,6 +2,8 @@ from django.contrib import admin
 from tasks.models import Tasks
 
 
-@admin.register()
 class TaskAdmin(admin.ModelAdmin):
-    pass
+    list_display = ('id', 'title', 'priority')
+
+
+admin.site.register(Tasks, TaskAdmin)
