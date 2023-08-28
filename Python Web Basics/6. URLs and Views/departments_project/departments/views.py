@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 def index(request):  
@@ -10,7 +10,10 @@ def details(request, department_id):
         '2': "QA"
     }
     payload = f"Department: {department_map.get(str(department_id), 'Unknown')}"
-    return HttpResponse(payload)
+    # return HttpResponse(payload)
+    # return redirect('/departments/template', department_id=department_id)
+    # return redirect('https://www.google.bg/')
+    return redirect('departments template')
 
 def details_template(request, department_id):
     print(department_id)
