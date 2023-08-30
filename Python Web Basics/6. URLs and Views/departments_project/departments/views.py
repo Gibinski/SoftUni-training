@@ -35,3 +35,7 @@ def details_error(request):
     # return Exception('custom')
     return HttpResponse('Not found 2', status_code=404)
     return HttpResponseNotFound('Not found')
+
+
+def slug_view(request, department_name):
+    return HttpResponse(f'{department_name}')
