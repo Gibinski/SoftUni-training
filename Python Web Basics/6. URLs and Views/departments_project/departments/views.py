@@ -1,5 +1,5 @@
-from django.shortcuts import render, redirect
-from django.http import HttpResponse
+from django.shortcuts import render, redirect, get_object_or_404, get_list_or_404
+from django.http import HttpResponse, Http404, HttpResponseNotFound
 
 def index(request):  
     return HttpResponse('index')
@@ -29,3 +29,9 @@ def details_template(request, department_id):
     }
 
     return render(request, 'departments/details.html', context=context)
+
+def details_error(request):
+    # return Http404
+    # return Exception('custom')
+    return HttpResponse('Not found 2', status_code=404)
+    return HttpResponseNotFound('Not found')
