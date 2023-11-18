@@ -18,7 +18,12 @@ class PoweOutletMixin:
         pass
 
 
-class Television(HDMIMixin, RCAMixin, PoweOutletMixin):
+class Device(PoweOutletMixin):
+    def connect_device_to_power_outlet(self):
+        return super().connect_device_to_power_outlet()
+
+
+class Television(HDMIMixin, RCAMixin, Device):
     def connect_to_dvd(self, dvd_player):
         self.connect_to_device_via_rca_cable(dvd_player)
 
@@ -29,7 +34,7 @@ class Television(HDMIMixin, RCAMixin, PoweOutletMixin):
         self.connect_device_to_power_outlet(self)
 
 
-class DVDPlayer(HDMIMixin, PoweOutletMixin):
+class DVDPlayer(HDMIMixin, Device):
     def connect_to_tv(self, television):
         self.connect_to_device_via_hdmi_cable(television)
 
@@ -37,7 +42,7 @@ class DVDPlayer(HDMIMixin, PoweOutletMixin):
         self.connect_device_to_power_outlet(self)
 
 
-class GameConsole(HDMIMixin, EthernetMixin, PoweOutletMixin):
+class GameConsole(HDMIMixin, EthernetMixin, Device):
     def connect_to_tv(self, television):
         self.connect_to_device_via_hdmi_cable(television)
 
@@ -48,7 +53,7 @@ class GameConsole(HDMIMixin, EthernetMixin, PoweOutletMixin):
         self.connect_device_to_power_outlet(self)
 
 
-class Router(EthernetMixin, PoweOutletMixin):
+class Router(EthernetMixin, Device):
     def connect_to_tv(self, television):
         self.connect_to_device_via_ethernet_cable(television)
 
