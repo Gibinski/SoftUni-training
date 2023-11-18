@@ -1,5 +1,3 @@
-class EntertainmentDevice:
-
 class HDMIMixin:
     def connect_to_device_via_hdmi_cable(self): 
         pass
