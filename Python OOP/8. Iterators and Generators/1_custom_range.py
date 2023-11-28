@@ -16,7 +16,7 @@ class custom_range:
             raise StopIteration()
         return result
 
-
+    
 one_to_ten = custom_range(1, 10)
 for num in one_to_ten:
     print(num)
