@@ -1,8 +1,6 @@
 def vowel_filter(func):
     def letters():
-        result =  func()
-        vowel = [ch for ch in result if ch.lower() in "aeiouy"]
-        return vowel
+        return [ch for ch in func() if ch.lower() in "aeiouy"]
     return letters
 
 
